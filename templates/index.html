@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>To do list</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+<h1>To do list</h1>
+<div>
+    <form action="/" method="POST">
+        <input type="text" name="content" id="content">
+        <input type="submit" value="+ New task" id="add_button">
+    </form>
+{% if tasks | length<1 %}
+<h3>No tasks here ... obviously</h3>
+{% else %}
+<table>
+<tr>
+    <th>Task</th> 
+    <th>Created</th> 
+    <th>Situation</th>  
+</tr>
+
+{% for task in tasks %}
+<tr>
+    <td>{{task.content}} </td>
+    <td>{{task.created.strftime("%d-%m-%Y")}} </td>
+    <td>
+        <a class="delete" href="/delete/{{task.id}}">🗑️ Delete </a>
+        <br>
+        <a class="edit" href="/edit/{{task.id}}">✎ Edit </a>
+    </td>
+</tr>
+{% endfor%}
+{% endif%}
+</table>
+</div>
+</div>
+{% endblock %}

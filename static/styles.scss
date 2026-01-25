@@ -1,0 +1,80 @@
+$primary_color: #25f897;
+$secondary_color: #25f842;
+$back_color: #003;
+$second_back_color:rgba(13, 13, 95, 0.795);
+$button_color: #e4f040;
+$del_butt: rgb(223, 23, 23);
+$edit_butt: rgb(11, 163, 57);
+$del_butt_hover: rgb(255, 12, 12);
+$edit_butt_hover: rgb(19, 241, 85);
+
+body{
+    background-color: $back_color;
+    font-style: $primary_color;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+}
+
+.content{
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: $second_back_color;
+    font-style: $primary_color;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    table{
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        th,td{
+            padding: 10px;
+            border: 1px solid $back_color;
+            max-width: 200px;
+        }
+        th{
+            background-color: $back_color;
+            color: $primary_color;
+        }
+    }
+    a{
+        display: inline-block;
+        padding: 5px 8px;
+        margin: 5px;
+        text-decoration: none;
+        border-radius: 20px;
+        min-width: 100px;
+        
+    }
+    .delete{
+        background-color: $del_butt;
+        color: $back_color;
+        &:hover{
+            background-color: $del_butt_hover;
+            color: $second_back_color;
+        }
+    }
+    .edit{
+        background-color: $edit_butt;
+        color: $back_color;
+        &:hover{
+            background-color: $edit_butt_hover;
+            color: $second_back_color;
+        }
+    }
+    input {
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        border: solid 1px;
+    }
+    #add_button{
+        background-color: $button_color;
+        color: $back_color;
+        &:hover{
+            background-color: $secondary_color;
+            color: $second_back_color;
+        }
+    }
+}
