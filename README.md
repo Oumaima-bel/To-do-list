@@ -1,2 +1,2 @@
 # To do list
-A web application that allow you to create, read update and delete your tasks.
+A simple web application that allow you to create, read, update and delete your tasks, it also shows the creation date.
